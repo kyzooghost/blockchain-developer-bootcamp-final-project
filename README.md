@@ -1,34 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# BLOCKCHAIN PHARMACY 💊
 
-## Getting Started
+Building frontend on https://ma-button.herokuapp.com/ before integrating into project
 
-First, run the development server:
+## SUMMARY
+A pharmacy existing as a smart contract on the blockchain
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## ROLES
+- **Patients** can log in, see available scripts that their doctor has prescribed them, and pay for them
+- **Doctors** can log in, see pending prescriptions, and create new prescriptions
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## ROLE WORKFLOW
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+**Doctor** 
+- Log in with Metamask (or web3 wallet of choice)
+- UI renders to show the scripts they have prescribed, and whether the patient has claimed them and when
+- UI also allows doctors to create new prescriptions
+- Doctors cannot prescribe to themselves
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+**Patient**
+- Log in with Metamask (or web3 wallet of choice)
+- UI renders to show outstanding scripts that their doctor has prescribed them
+- Patients can click 'PURCHASE' on those outstanding scripts, and this will transfer the corresponding USDT price from their wallet to the pharmacy smart contract
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## ADDITIONAL FEATURES TO CONSIDER IF TIME ALLOWING OR IF CRITICAL
+- Should medicines be an NFT minted to the patient once purchased?
+- Should there be a pharmacy owner multisig, that can transfer smart contract funds and change prices?
+- Who can assign the doctor role? Can the doctor role be taken away?
