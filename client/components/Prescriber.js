@@ -146,7 +146,7 @@ export default function Prescriber({ children } ) {
             <br/>
             <br/>
             <br/>
-            <WelcomeText textAlign="center">Enter your patient's Ethereum address: </WelcomeText> 
+            <WelcomeText textAlign="center">{" Enter your patient's Ethereum address: "}</WelcomeText> 
             <br/>
             <PatientInput placeholder= "0x..." value={patientAddress} onChange={handleAddressInputChange}/>
             <br/>
