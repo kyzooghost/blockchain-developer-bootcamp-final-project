@@ -6,7 +6,10 @@
     "dev": "next dev ./client",
     "build": "next build ./client",
     "start": "next start ./client",
-    "lint": "next lint ./client"
+    "lint": "next lint ./client",
+    "test": "truffle test",
+    "build-rinkeby": "truffle compile && truffle migrate --network rinkeby && truffle exec ./scripts/migrate_to_frontend.js --network rinkeby && npx kill-port 3000 && npm run dev",
+    "test-ganache": "truffle compile && truffle migrate --network ganache && truffle exec ./scripts/migrate_to_frontend.js --network ganache && npx kill-port 3000 && npm run dev"
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.0.16",

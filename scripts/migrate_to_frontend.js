@@ -14,7 +14,7 @@ module.exports = async function(callback) {
     `const DEPLOYED_CHAIN_ID = "${CHAIN_ID}";\n` + 
     'export { ADDRESS, DEPLOYED_CHAIN_ID };'
 
-    fs.writeFileSync("./client/contract_config.js", script_code);
+    fs.writeFileSync("./client/constants/chain_config.js", script_code);
 
     callback();
 }

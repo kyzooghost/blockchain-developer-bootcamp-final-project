@@ -1,7 +1,7 @@
-import abi from '../abi/abi'
+import abi from '../constants/abi'
 import { ethers } from 'ethers';
 import { useMetamask } from './useMetamask'
-import { ADDRESS } from '../contract_config'
+import { ADDRESS } from '../constants/chain_config'
 
 export function usePharmacy() {
     const { provider } = useMetamask();

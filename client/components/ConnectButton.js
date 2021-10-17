@@ -6,7 +6,7 @@ import { ethers } from 'ethers';
 import MetaMaskOnboarding from '@metamask/onboarding';
 import Identicon from "./Identicon";
 import { useMetamask } from '../hooks/useMetamask'
-import { DEPLOYED_CHAIN_ID } from '../contract_config'
+import { DEPLOYED_CHAIN_ID } from '../constants/chain_config'
 
 const ONBOARD_TEXT = "Click here to install Metamask! (required for this app)";
 const CONNECT_TEXT = 'Connect to a wallet';

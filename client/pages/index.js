@@ -2,7 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import WelcomeScreen from '../components/WelcomeScreen'
 import { useMetamask } from '../hooks/useMetamask'
-import { DEPLOYED_CHAIN_ID } from '../contract_config'
+import { DEPLOYED_CHAIN_ID } from '../constants/chain_config'
 
 export default function Home() {
 
