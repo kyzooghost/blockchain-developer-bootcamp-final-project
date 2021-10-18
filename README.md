@@ -15,12 +15,12 @@ The root folder has been initialised as both a Next.js app and a Truffle app (th
 
 
 /client - Frontend code and assets  
-  /components - Custom React components  
-  /constants - Contains configuration files for the frontend to connect properly to the deployed smart contract  
-  /hooks - Custom React hooks  
-  /pages - As per Next.js default structure  
-  /public - Static assets as per Next.js default structure  
-  /styles - CSS files as per Next.js default structure  
+&nbsp;&nbsp;/components - Custom React components  
+&nbsp;&nbsp;/constants - Contains configuration files for the frontend to connect properly to the deployed smart contract  
+&nbsp;&nbsp;/hooks - Custom React hooks  
+&nbsp;&nbsp;/pages - As per Next.js default structure  
+&nbsp;&nbsp;/public - Static assets as per Next.js default structure  
+&nbsp;&nbsp;/styles - CSS files as per Next.js default structure  
 /contracts - Smart contracts as per Truffle setup  
 /documentation - Further project documentation  
 /migrations - Migration scripts as per Truffle setup  
