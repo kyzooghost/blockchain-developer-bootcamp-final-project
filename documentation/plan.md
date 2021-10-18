@@ -1,6 +1,6 @@
 // DESIGN DOCUMENTS
 
-Pharmacy.sol deployed and verified at 0x40ab96e4612be5a1176F5F49787076DD79da0eba on Rinkeby
+Pharmacy.sol deployed and verified at 0x4a0C38Fe6Ec84EE72Fa4f4cE67bA6Ac356d13fD7 on Rinkeby
 
 # TO-DOS
 
@@ -40,8 +40,6 @@ scripts Folder
 - scripts/server - Spins up a local testnet and server to serve decentralised application locally ?npm run dev
 - scripts/tests - Run through test suite for your project 
 
-- Test suite for React?
-
 ## BLOCKCHAIN PHARMACY 💊
 
 # WHY A PHARMACY ON THE BLOCKCHAIN?
@@ -78,6 +76,11 @@ Patients
 
 Pharmacy Admin
 - Log-in with Metamask -> i.) See recent purchases, ii.) See total balance of pharmacy smart contract, iii.) Recover ERC20 and ERC721 tokens sent mistakenly to the contract, iv.) Send ETH from the smart contract to a whitelisted address
+
+## ADDITIONAL FEATURES TO CONSIDER IF TIME ALLOWING OR IF CRITICAL
+- Add feature to allow prescriber to search the scripts that a patient has
+- React tests
+- Should there be a pharmacy owner multisig, that can transfer smart contract funds and change prices?
 
 **Technical details**
 
