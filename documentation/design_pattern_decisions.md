@@ -1,3 +1,39 @@
+## SMART CONTRACT DESIGN PATTERNS
+
+### Role Based Access Control
+
+Implemented the OpenZeppelin AccessControl library to restrict access to "Prescriber" functions including createPrescription(), cancelPrescription() and editPrescription()
+
+### Tight packing of variables into structs
+
+Used this in the Script struct
+
+```
+    struct Script { 
+        uint256 prescriptionId;
+        address prescriber;
+        address patient;
+        string medication; // Tried declaring as a "bytes32" first, but decided it was simpler for the dev and user experience to use "string", even if gas costs are higher
+        // Pack the following variables into a single 256-bit storage slot
+        uint32 timePrescribed; // uses single storage slot - 32 bits
+        uint32 timeDispensed; // uses single storage slot - 32 bits
+        bool prescriptionValid; // uses single storage slot - 8 bits
+        bool dispensed; // uses single storage slot - 8 bits
+        uint32 dose; // uses single storage slot - 32 bits
+        uint144 price; // uses single storage slot - 144 bits
+        // 32 + 32 + 8 + 8 + 32 + 144 = 256 bits 
+        string instructions; // Store unit, repeats, quantity, indication, route here
+    }
+```
+
+Design patterns
+- OpenZeppelin - Using roles for role-based access control 
+- Pull over Push payments - for Withdraw function
+- Using modifiers for checks
+- Tight variable packing - in struct
+- Fail early and fail loud
+
+
 Frontend design decisions
 
 React framework and deployment
@@ -14,12 +50,7 @@ FRONTEND DESIGN DECISIONS
 
 SOLIDITY DESIGN DECISIONS
 
-Design patterns
-- OpenZeppelin - Using roles for role-based access control 
-- Pull over Push payments - for Withdraw function
-- Using modifiers for checks
-- Tight variable packing - in struct
-- Fail early and fail loud
+
 
 Top 5 medications prescribed
 - Cephalexin 500mg TDS
@@ -36,26 +67,6 @@ https://www.flaticon.com/free-icon/medicine_647349
 https://www.flaticon.com/free-icon/medicine_647350
 https://www.flaticon.com/free-icon/pills_647377
 Or use a generic pill icon?
-
-Metamask Button issues
-- Lag in detecting Metamask "Log off" and "Log in" events sometimes
-    - Tested out - https://private-redemption.avalaunch.app/ - Has similar issues so let's work on something else
-- 
-
-React Components needed (Ensure only work if connect to Rinkeby and logged-into Metamask)
-- Error Component, telling to log into Rinkeby?
-- Bought/Pending Prescription Component
-- Past Prescription Component
-- Purchase Button Component - linked to purchase()
-- Buy Button Component - linked to buy()
-- Buttons for Pharm admin?
-
-Security
-- Use SafeMath to avoid Integer Over/Underflow (SWC-101)
-- Avoid txOrigin attack (SWC-115)
-- Using new Solidity (SWC-102)
-
-- Get protection against SWC-136 - Unencrypted Private Data On-Chain
 
 Truffle Test Suite
 - Tested every way I can think of that the functions in the contract could be called and exploited and used

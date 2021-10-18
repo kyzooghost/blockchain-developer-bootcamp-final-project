@@ -21,6 +21,7 @@ Solidity
 - https://github.com/fravoll/solidity-patterns
 - https://ethereum.stackexchange.com/questions/19380/external-vs-public-best-practices
 - https://recipp.ipp.pt/bitstream/10400.22/16441/1/DM_TiagoMoura_2020_MEI.pdf
+- http://eprints.cs.univie.ac.at/5665/1/bare_conf.pdf
 
 Images
 - https://www.freepik.com/free-vector/clean-medical-background_13313271.htm
