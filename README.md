@@ -2,6 +2,7 @@
 
 A pharmacy existing as a smart contract on the blockchain
 
+Smart contract deployed on Rinkeby at 0x4a0C38Fe6Ec84EE72Fa4f4cE67bA6Ac356d13fD7 - https://rinkeby.etherscan.io/address/0x4a0C38Fe6Ec84EE72Fa4f4cE67bA6Ac356d13fD7#code
 Frontend deployed on https://blockchaindeveloperbootcampfin.herokuapp.com/
 
 ## ROLES
