@@ -14,16 +14,27 @@ Frontend deployed on https://blockchaindeveloperbootcampfin.herokuapp.com/
 The root folder has been initialised as both a Next.js app and a Truffle app (through "npx create-next-app" and "truffle init" commands), and can be deployed directly to Heroku to serve the frontend.
 
 /client - Frontend code and assets
+
   /components - Custom React components
+
   /constants - Contains configuration files for the frontend to connect properly to the deployed smart contract
+
   /hooks - Custom React hooks
+
   /pages - As per Next.js default structure
+
   /public - Static assets as per Next.js default structure
+
   /styles - CSS files as per Next.js default structure
+
 /contracts - Smart contracts as per Truffle setup
+
 /documentation - Further project documentation
+
 /migrations - Migration scripts as per Truffle setup
+
 /scripts - Contains a custom Truffle script to ensure that after the smart contract is deployed, the frontend is then configured to connect with it
+
 /test - Test scripts as per Truffle setup
 
 ## INSTALLATION
