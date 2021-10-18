@@ -20,6 +20,7 @@ Truffle scripts
 Pharmacy.sol
 - Test run of user flow with Remix IDE ✔️
 - Comment to NatSpec Format ✔️
+- Inherit at least one library or interface ✔️
 
 Files
 - .env ✔️
