@@ -12,11 +12,6 @@ Patients
 Pharmacy Admin
 - Log-in with Metamask -> i.) See recent purchases, ii.) See total balance of pharmacy smart contract, iii.) Recover ERC20 and ERC721 tokens sent mistakenly to the contract, iv.) Send ETH from the smart contract to a whitelisted address
 
-## ADDITIONAL FEATURES TO CONSIDER IF TIME ALLOWING OR IF CRITICAL
-- Add feature to allow prescriber to search the scripts that a patient has
-- React tests
-- Should there be a pharmacy owner multisig, that can transfer smart contract funds and change prices?
-
 # Solidity notes to consider
 
 Solidity notes
@@ -47,7 +42,3 @@ Variable packing, or creating a tightly packed struct
 - uint16 - 2-bytes
 - uint32 - 4-bytes
 - Save lots of gas, because not using extra SSTORE operations
-
-**Final Project Submission specs**
-- README.md which describes the project, describes the directory structure, and where the frontend project can be accessed
-    - Inherit from at least one library or interface

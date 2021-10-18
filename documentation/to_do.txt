@@ -36,6 +36,7 @@ In README.md
 - Clear instructions installing dependencies ✔️
 - Clear instructions on accessing or running project ✔️
 - Clear instructions on running contract unit tests, and which port a local testnet should be running on ✔️
+- Directory structure explanation ✔️
 - Heroku link ✔️
 
 ## ADDITIONAL FEATURES TO CONSIDER IF TIME ALLOWING OR IF CRITICAL
