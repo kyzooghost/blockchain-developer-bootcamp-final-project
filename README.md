@@ -25,3 +25,11 @@ Then to install the required dependencies, run
 
 ## DEPLOYING ON A TEST SERVER
 
+
+## TESTING
+
+To run the test suite, you can use either one of:
+
+    truffle test
+
+    npm test
