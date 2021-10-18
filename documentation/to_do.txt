@@ -1,0 +1,44 @@
+# TO-DOS
+
+Start the frontend
+- Detect MetaMask presence ✔️
+- Connect to current account ✔️
+- Display information from your smart contract ✔️
+- Allow user to submit transaction to update smart contract state ✔️
+- Update frontend if the transaction is successful or not ✔️
+
+Hosting
+- How to set up a React environment? How to then host that environment on React? ✔️
+- Host on Heroku or Netlify ✔️
+
+Truffle scripts
+- Test compilation of Pharmacy.sol ✔️
+- Write unit tests script/s - at least 4 unit tests✔️, Test that should work, that should fail, and complete mess // Write more test code than Solidity code lol ✔️
+- https://github.com/ConsenSys-Academy-Github-Classroom/supply-chain-exercise-RasenGUY/tree/master/test ✔️
+- Write migration scripts ✔️
+
+Pharmacy.sol
+- Test run of user flow with Remix IDE ✔️
+- Comment to NatSpec Format ✔️
+
+Files
+- .env ✔️
+- .gitignore ✔️
+
+Documentation
+- design_pattern_decisions.md - include 2x design patterns from "Smart Contracts"
+- avoiding_common_attacks.md - include 2x attack vectors with SWC number
+- deployed_address.txt - Testnet address and network ✔️
+- Screencast of walking through project, including submitting transaction and seeing updated state
+
+In README.md
+- Clear instructions installing dependencies ✔️
+- Clear instructions on accessing or running project ✔️
+- Clear instructions on running contract unit tests, and which port a local testnet should be running on ✔️
+- Heroku link ✔️
+
+## ADDITIONAL FEATURES TO CONSIDER IF TIME ALLOWING OR IF CRITICAL
+
+- Add feature to allow prescriber to search the scripts that a patient has
+- React tests
+- Should there be a pharmacy owner multisig, that can transfer smart contract funds and change prices?

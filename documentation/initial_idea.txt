@@ -1,0 +1,31 @@
+Thoughts
+- Need to create or access index of ETH mainnet transactions for a time period (Will this require a crapload of API calls? This is the pivotal part of this project)
+- Need to filter above index for smart contract created in the last week
+- Need to create table for "smart contracts created in the last week" and add colums for "Transactions", "Date created", "Gas used", "Unique users"
+
+Data sorting thoughts
+- I want to have the option to blacklist or remove certain smart contracts from my dashbaord
+- How does Etherscan mark whether an address is a smart contract?
+- Is there anyway to trace what from what frontend are contract calls coming from?
+- If I enable Metamask to connect to it, what would the point of this feature be? Why would someone need to connect to their MM account to use my app?
+
+Create a UI
+- Probably going to cost too much API calls to make the page auto-refresh every 1-5 seconds, so make it a manual refresh button
+- Have options to view by "Most transactions", "most gas used", "most unique active addresses"
+
+Beyond-MVP thoughts
+- Make the dashboard work for Polygon, Avalanche, BSC Chain, Fantom, Solana
+
+APIs?
+- Alchemy
+- Covalent
+- Etherscan
+- Cryptosheets
+- The Graph
+
+Random relevant notes on studying the course
+- A contract contains EVM code and storage, and has a corresponding code hash and storage hash; an EOA doesn't
+- Any transaction without a 'to' field is assumed to be a contract creation?
+
+UPDATE 10 SEP 2021
+- Can I integrate a smart contract into this? Nansen Hot contracts doesn't have a contract

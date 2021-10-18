@@ -2,13 +2,11 @@
 
 A pharmacy existing as a smart contract on the blockchain
 
+Frontend deployed on https://blockchaindeveloperbootcampfin.herokuapp.com/
+
 ## ROLES
 - **Patients** can see pending prescriptions and pay for them
 - **Prescribers** can create new prescriptions, and see their most recent prescriptions
-
-## DEPLOYED APP
-- Smart contract deployed on Rinkeby at 0x4a0C38Fe6Ec84EE72Fa4f4cE67bA6Ac356d13fD7
-- Frontend deployed on https://blockchaindeveloperbootcampfin.herokuapp.com/
 
 ## INSTALLATION
 
