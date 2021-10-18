@@ -42,10 +42,10 @@ This will deploy the Pharmacy smart contract onto your Ganache instance, and the
 
 ## DEPLOYING ON RINKEBY
 
-To deploy on Rinkeby, you will need to provide your own private key and Rinkeby API key. Go to line 43 of truffle-config.js and insert them: 
+To deploy on Rinkeby, you will need to provide your own private key and Rinkeby API key. Insert them into line 43 of truffle-config.js:
 
     ...
-    provider: () => new PrivateKeyProvider(YOUR_PRIVATE_KEY, YOUR_RINKEBY_API_KEY),
+        provider: () => new PrivateKeyProvider(YOUR_PRIVATE_KEY, YOUR_RINKEBY_API_KEY),
     ...
 
 Then type
