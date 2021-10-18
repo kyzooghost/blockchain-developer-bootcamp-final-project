@@ -28,8 +28,10 @@ Then to install the required dependencies, run
 
 ## TESTING
 
-To run the test suite, you can use either one of:
+To run the test suite, you can use either
 
     truffle test
+
+or
 
     npm test
