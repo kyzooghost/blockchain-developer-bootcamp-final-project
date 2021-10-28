@@ -30,7 +30,7 @@ Documentation
 - design_pattern_decisions.md - include 2x design patterns from "Smart Contracts" ✔️
 - avoiding_common_attacks.md - include 2x attack vectors with SWC number ✔️
 - deployed_address.txt - Testnet address and network ✔️
-- Screencast of walking through project, including submitting transaction and seeing updated state
+- Screencast of walking through project, including submitting transaction and seeing updated state ✔️
 
 In README.md
 - Clear instructions installing dependencies ✔️
@@ -42,6 +42,6 @@ In README.md
 
 ## ADDITIONAL FEATURES TO CONSIDER IF TIME ALLOWING OR IF CRITICAL
 
-- Add feature to allow prescriber to search the scripts that a patient has
+- Add feature to allow prescriber to search the scripts that a patient has ✔️
 - React tests
 - Should there be a pharmacy owner multisig, that can transfer smart contract funds and change prices?

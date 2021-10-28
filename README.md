@@ -1,6 +1,10 @@
+![](https://raw.githubusercontent.com/kyzooghost/blockchain-developer-bootcamp-final-project/main/.github/images/homepage.png)
+
 # BLOCKCHAIN PHARMACY 💊
 
 A pharmacy existing as a smart contract on the blockchain
+
+Screencast - https://youtu.be/F1P_L6te9iY
 
 App available on https://blockchaindeveloperbootcampfin.herokuapp.com/
 
