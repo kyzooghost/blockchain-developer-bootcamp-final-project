@@ -3,6 +3,7 @@
 A pharmacy existing as a smart contract on the blockchain
 
 App available on https://blockchaindeveloperbootcampfin.herokuapp.com/
+
 Public Ethereum address: 0x1D3BaEDd71E597982D686379F90d91ab23181956
 
 ## ROLES
@@ -82,3 +83,17 @@ To run the test suite, you can use either
 or
 
     npm test
+
+## .env FILE
+
+To deploy to Rinkeby (or public testnet of your choice), you will need to provide your own private key and Rinkeby API URL.
+
+To programatically verify the smart contract on Etherscan with Truffle, you will need to provide your own Etherscan API key.
+
+To provide these, create a .env file in the root directory with the following contents:
+
+```text
+ETHERSCAN_API_KEY = ...
+PRIVATE_KEY = ...
+RINKEBY_API_URL = ...
+```
