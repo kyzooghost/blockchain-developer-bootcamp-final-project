@@ -29,6 +29,7 @@ The root folder has been initialised as both a Next.js app and a Truffle app (th
   /styles - CSS files as per Next.js default structure
 /contracts - Smart contracts as per Truffle setup
 /documentation - Further project documentation
+/images - Image files for README.md
 /migrations - Migration scripts as per Truffle setup
 /scripts - Contains a custom Truffle script to ensure that after the smart contract is deployed, the frontend is then configured to connect with it
 /test - Test scripts as per Truffle setup
