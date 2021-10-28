@@ -8,7 +8,7 @@ Screencast - https://youtu.be/F1P_L6te9iY
 
 App available on https://blockchaindeveloperbootcampfin.herokuapp.com/
 
-Public Ethereum address: 0x1D3BaEDd71E597982D686379F90d91ab23181956
+Deployed on Rinkeby at 0x4a0C38Fe6Ec84EE72Fa4f4cE67bA6Ac356d13fD7
 
 ## ROLES
 - **Patients** can see pending prescriptions and pay for them
@@ -102,3 +102,7 @@ ETHERSCAN_API_KEY = ...
 PRIVATE_KEY = ...
 RINKEBY_API_URL = ...
 ```
+
+## Public Ethereum address (For NFT certification)
+
+0x1D3BaEDd71E597982D686379F90d91ab23181956
