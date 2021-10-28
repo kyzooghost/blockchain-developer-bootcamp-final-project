@@ -38,7 +38,7 @@ In README.md
 - Clear instructions on running contract unit tests, and which port a local testnet should be running on ✔️
 - Directory structure explanation ✔️
 - Heroku link ✔️
-- Include your public Ethereum account if you would like to receive your certification as an NFT
+- Include your public Ethereum account if you would like to receive your certification as an NFT ✔️
 
 ## ADDITIONAL FEATURES TO CONSIDER IF TIME ALLOWING OR IF CRITICAL
 
