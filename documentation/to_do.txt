@@ -29,7 +29,7 @@ Files
 - .gitignore ✔️
 
 Documentation
-- design_pattern_decisions.md - include 2x design patterns from "Smart Contracts" 
+- design_pattern_decisions.md - include 2x design patterns from "Smart Contracts" ✔️
 - avoiding_common_attacks.md - include 2x attack vectors with SWC number ✔️
 - deployed_address.txt - Testnet address and network ✔️
 - Screencast of walking through project, including submitting transaction and seeing updated state

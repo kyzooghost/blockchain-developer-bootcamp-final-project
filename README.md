@@ -6,12 +6,12 @@ Frontend deployed on https://blockchaindeveloperbootcampfin.herokuapp.com/
 
 ## ROLES
 - **Patients** can see pending prescriptions and pay for them
-- **Prescribers** can create new prescriptions, and see their most recent prescriptions
+- **Prescribers** can check the existing scripts for a patient, create new prescriptions, and see their most recent prescriptions
 
 
 ## DIRECTORY STRUCTURE
 
-The root folder has been initialised as both a Next.js app and a Truffle app (through "npx create-next-app" and "truffle init" commands), and can be deployed directly to Heroku to serve the frontend.
+The root folder has been initialised as both a Next.js app and a Truffle app (through `npx create-next-app` => `truffle init` commands), and can be deployed directly to Heroku to serve the frontend.
 
 ```text
 /client - Frontend code and assets

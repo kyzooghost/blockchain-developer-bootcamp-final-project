@@ -1,5 +1,3 @@
-// TODO? - Authenticate yourself before getting in?
-
 import React, { useState, useEffect, useRef } from 'react';
 import { Button, Box, Text, Flex, chakra } from "@chakra-ui/react";
 import { ethers } from 'ethers';

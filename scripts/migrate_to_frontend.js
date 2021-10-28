@@ -18,5 +18,3 @@ module.exports = async function(callback) {
 
     callback();
 }
-
-// truffle exec ./scripts/migrate_to_frontend.js --network rinkeby

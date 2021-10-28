@@ -1,5 +1,15 @@
 import { Flex, chakra } from "@chakra-ui/react";
 
+export default function Layout({ children } ) {
+  return (
+    <>
+      <Layout_Flex >
+        {children}
+      </Layout_Flex>
+    </>
+  )
+}
+
 const Layout_Flex = chakra(Flex, {
   baseStyle: {
     flexDirection:"column",
@@ -25,13 +35,3 @@ const Layout_Flex = chakra(Flex, {
   }
   },
 });
-
-export default function Layout({ children } ) {
-  return (
-    <>
-      <Layout_Flex >
-        {children}
-      </Layout_Flex>
-    </>
-  )
-}

@@ -16,7 +16,6 @@ export default function Home() {
         <link rel="icon" href="/pharmacyFavicon.png" />
       </Head>
 
-      {/* Will need conditional rendering within this block, to render <Prescriber/> and <Patient/> and <Admin/> based on smart contract read */}
       {(chainID == DEPLOYED_CHAIN_ID) &&
         <WelcomeScreen/>
       }

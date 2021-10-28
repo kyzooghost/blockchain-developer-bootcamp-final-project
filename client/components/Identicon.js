@@ -20,6 +20,6 @@ export default function Identicon( {account} ) {
     }
   }, [account]);
   
-  // useRef hook to create attach our created HTML element to a HTML element already on the page
+  // useRef hook to attach our created HTML element to a HTML element already on the page
   return <StyledIdenticon ref={ref} />
 }

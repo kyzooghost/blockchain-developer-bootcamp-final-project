@@ -25,10 +25,6 @@ export default function Prescriber({ children } ) {
     const { accounts, provider, shortenAddress } = useMetamask();
     const { pharmacyConnected } = usePharmacy();
 
-    /* FORM INPUT AND BUTTON CLICK HANDLERS */
-
-    const handleAddressInputChange = (event) => setpatientAddress(event.target.value)
-
     useEffect(() => {
         if (accounts[0]) {
             (async () => {
@@ -54,6 +50,10 @@ export default function Prescriber({ children } ) {
             })();
         }
     })
+
+    /* FORM INPUT AND BUTTON CLICK HANDLERS */
+
+    const handleAddressInputChange = (event) => setpatientAddress(event.target.value)
 
     async function handleSeePrescriptions() {
         try {
@@ -174,9 +174,6 @@ export default function Prescriber({ children } ) {
         }
     }
 
-    // 0xd9A8DEF63006499689E6CCC1114A8E6151CeD64D
-    // 0xd9362eFdB46551eD707c5Bed8AA4d3410aEfd3Cc
-
     return (
         <Flex direction="column">
             <WelcomeText textAlign="center">Welcome Dr. {accounts[0]}</WelcomeText>
@@ -186,6 +183,7 @@ export default function Prescriber({ children } ) {
             <WelcomeText textAlign="center">{" Enter your patient's Ethereum address: "}</WelcomeText> 
             <br/>
             <PatientInput placeholder= "0x..." value={patientAddress} onChange={handleAddressInputChange}/>
+            <br/>
             <br/>
             <br/>
             <Flex justifyContent = "center">
@@ -201,11 +199,11 @@ export default function Prescriber({ children } ) {
             {patientScriptsRequested ? 
                 patientScripts.length == 0 ? 
                     <Flex justifyContent = "center" mt={6} mb={-2}>
-                        <Text>Your patient has no prescriptions</Text> 
+                        <Text>This patient has no prescriptions</Text> 
                     </Flex>
                     :
                     <Box mt={8}>
-                        <WelcomeText textAlign="center" mb={5}>{patientAddress}&#39;s prescriptions</WelcomeText>
+                        <WelcomeText fontSize="1.4rem" textAlign="center" mb={5}>{patientAddress}&#39;s prescriptions</WelcomeText>
                         <Box mt={5} mb={-2} height="310px" overflowY="auto">
                             <Table tableLayout="fixed" variant="striped" colorScheme="cyan" marginBottom="50px">
                                 <Thead>
@@ -238,8 +236,9 @@ export default function Prescriber({ children } ) {
                 null}
             <br/>
             <br/>
-            <WelcomeText textAlign="center">What would you like to prescribe?</WelcomeText>
-            <Flex m = {10} justify="space-between">
+            <br/>
+            <WelcomeText mb={4} textAlign="center">What would you like to prescribe?</WelcomeText>
+            <Flex m = {5} justify="space-between">
                 <MedicineBox onClick={handleAspirinClick} margin = "0 auto">
                     <Image maxHeight= "100%" width = "90px" src="pill.png" alt="pill" />
                     {isAspirinPrescribing ? <MedicineText><Spinner speed = "0.75s"/></MedicineText> : <MedicineText>Aspirin</MedicineText>}
@@ -259,6 +258,7 @@ export default function Prescriber({ children } ) {
       
             </Flex>
 
+            <br/>
             <br/>
             <WelcomeText textAlign="center">Your recent prescriptions (showing last 5)</WelcomeText>
             <br/>
