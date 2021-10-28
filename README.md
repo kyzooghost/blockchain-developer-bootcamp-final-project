@@ -48,7 +48,7 @@ Then to install the required dependencies, run
 
 To deploy your own instance of the Pharmacy smart contract on a Ganache testnet blockchain, you will first need to install Ganache - https://www.trufflesuite.com/ganache
 
-You will then need to link this project to Ganache by using Ganache's 'ADD PROJECT' feature and selecting this project's truffle-config.js file.
+You will then need to link this project to Ganache by creating a new workspace in Ganache, clicking 'ADD PROJECT' feature and then selecting this project's truffle-config.js file.
 
 Then make sure the Ganache server settings are at default
 - Hostname: 127.0.0.1
