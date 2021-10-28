@@ -14,6 +14,10 @@ Used Solidity ^0.8.0
 
 No selfdestruct() function
 
+### SWC-107 Reentrancy
+
+Only the withdrawFunds() and sendFunds() functions involve external interactions and are hence susceptible to reentrancy attacks. Both of these functions fit the Checks-Effects-Interaction pattern to these
+
 ### SWC-115 Authorization through tx.origin
 
 tx.origin not used
