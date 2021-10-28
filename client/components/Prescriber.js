@@ -78,7 +78,6 @@ export default function Prescriber({ children } ) {
             }
 
             placeholder_scripts = placeholder_scripts.reverse()
-    
             setPatientScripts(placeholder_scripts)
             setPatientScriptsButtonLoading(false)
             setPatientScriptsRequested(true)
@@ -86,9 +85,6 @@ export default function Prescriber({ children } ) {
             alert(err.message)
         }
     }
-
-    // 0xd9A8DEF63006499689E6CCC1114A8E6151CeD64D
-    // 0xd9362eFdB46551eD707c5Bed8AA4d3410aEfd3Cc
 
     async function handleAspirinClick() {
         if(ethers.utils.isAddress(patientAddress)) {
@@ -178,6 +174,9 @@ export default function Prescriber({ children } ) {
         }
     }
 
+    // 0xd9A8DEF63006499689E6CCC1114A8E6151CeD64D
+    // 0xd9362eFdB46551eD707c5Bed8AA4d3410aEfd3Cc
+
     return (
         <Flex direction="column">
             <WelcomeText textAlign="center">Welcome Dr. {accounts[0]}</WelcomeText>
@@ -194,22 +193,19 @@ export default function Prescriber({ children } ) {
                     isDisabled={!(ethers.utils.isAddress(patientAddress) && accounts[0] != patientAddress)} 
                     isLoading={patientScriptsButtonLoading}
                     onClick={handleSeePrescriptions}
-                    colorScheme="gray" 
-                    border="1px" 
-                    borderColor="gray.300"
+                    colorScheme="gray" border="1px" borderColor="gray.300"
                     >
-                    See patient's existing prescriptions
+                    See patient&#39;s existing prescriptions
                 </Button>
             </Flex>
             {patientScriptsRequested ? 
-                
                 patientScripts.length == 0 ? 
                     <Flex justifyContent = "center" mt={6} mb={-2}>
                         <Text>Your patient has no prescriptions</Text> 
                     </Flex>
                     :
                     <Box mt={8}>
-                        <WelcomeText textAlign="center" mb={5}>{patientAddress}'s prescriptions</WelcomeText>
+                        <WelcomeText textAlign="center" mb={5}>{patientAddress}&#39;s prescriptions</WelcomeText>
                         <Box mt={5} mb={-2} height="310px" overflowY="auto">
                             <Table tableLayout="fixed" variant="striped" colorScheme="cyan" marginBottom="50px">
                                 <Thead>
