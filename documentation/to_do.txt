@@ -1,7 +1,5 @@
 # TO-DOS
 
-Check the contract for Check-Effects-Interaction
-
 Start the frontend
 - Detect MetaMask presence ✔️
 - Connect to current account ✔️
