@@ -43,7 +43,6 @@ export default function Prescriber({ children } ) {
                 let script_ids = await pharmacyConnected.get_patientPrescriptions(accounts[0]);
                 script_ids = script_ids.map(x => Number(ethers.utils.formatUnits(x, 0)));
                 let scripts = await Promise.all(script_ids.map(async (x) => {return await pharmacyConnected.getScriptInformation(x)}))
-    
                 let placeholder_scripts = []
     
                 for (let element of scripts) {
@@ -58,6 +57,7 @@ export default function Prescriber({ children } ) {
                     })
                 }
     
+                placeholder_scripts = placeholder_scripts.reverse()
                 let claimed_scripts = [];
                 let pending_scripts = [];
     
@@ -69,21 +69,23 @@ export default function Prescriber({ children } ) {
                     }
                 }
     
-                setClaimedScripts(claimed_scripts);
+                pending_scripts = pending_scripts.slice(-5)
                 setPendingScripts(pending_scripts);
+                setClaimedScripts(claimed_scripts);
                 setScriptsLoading(false);
             })();            
         }
     })
 
     async function handleClick(script_id, index) {
+        useState_holder['setPurchaseButtonLoading_' + index](true)
+
         try {
             // Turn on event listener for "error", although not sure how to active this and what the message looks like
             provider.on("error", (tx) => {alert(tx)})
 
             // Sending the transaction
             const tx = await pharmacyConnected.purchase(script_id, {value: ethers.utils.parseEther("0.01")})
-            useState_holder['setPurchaseButtonLoading_' + index](true)
 
             // Await transaction confirmation
             const status = await provider.waitForTransaction(tx.hash)
@@ -92,6 +94,7 @@ export default function Prescriber({ children } ) {
 
         } catch(err) {
             alert(err.message)
+            useState_holder['setPurchaseButtonLoading_' + index](false)
         }
     }
 
@@ -101,12 +104,12 @@ export default function Prescriber({ children } ) {
             <br/>
             <br/>
             <br/>
-            <WelcomeText textAlign="center">Your recent pending prescriptions</WelcomeText>
+            <WelcomeText textAlign="center">Your pending prescriptions</WelcomeText>
             <br/>
             {scriptsLoading ?
             <Skeleton height = "305px"/>
             :
-            <Table tableLayout="fixed" variant="striped" colorScheme="teal" marginBottom="50px">
+            <Table tableLayout="fixed" variant="striped" colorScheme="cyan" marginBottom="50px">
                 <Thead>
                     <Tr>
                     <Th>Script ID</Th>
@@ -127,11 +130,7 @@ export default function Prescriber({ children } ) {
                                 <Td>{element.medication}</Td>
                                 <Td>{element.price}</Td>
                                 <Td isNumeric>
-                                    {useState_holder['purchaseButtonLoading_' + index] ?
-                                    <PurchaseButton isLoading size = "sm" colorScheme="blue"></PurchaseButton>
-                                    :
-                                    <PurchaseButton onClick={() => handleClick(element.id, index)} size = "sm" colorScheme="blue">Purchase</PurchaseButton>
-                                    }
+                                    <PurchaseButton isLoading={useState_holder['purchaseButtonLoading_' + index]} onClick={() => handleClick(element.id, index)} size = "sm" colorScheme="blue">Purchase</PurchaseButton>
                                 </Td>
                                 
                             </Tr>             
@@ -142,34 +141,36 @@ export default function Prescriber({ children } ) {
             </Table>
             }
             <br/>
-            <WelcomeText textAlign="center">Your recent claimed prescriptions</WelcomeText>
+            <WelcomeText textAlign="center">Your claimed prescriptions</WelcomeText>
             <br/>
             {scriptsLoading ?
             <Skeleton height = "305px"/>
             :
-            <Table tableLayout="fixed" variant="striped" colorScheme="teal" marginBottom="50px">
-                <Thead>
-                    <Tr>
-                    <Th>Script ID</Th>
-                    <Th>Prescriber</Th>
-                    <Th>Medication</Th>
-                    <Th>Time purchased</Th>
-                    </Tr>
-                </Thead>
-                
-                <Tbody>
-                    {claimedScripts.length != 0 && claimedScripts.map(element => {
-                            return( 
-                                <Tr key={element.id}>
-                                    <Td>{element.id}</Td>
-                                    <Td>{element.prescriber}</Td>
-                                    <Td>{element.medication}</Td>
-                                    <Td>{element.time_dispensed}</Td>
-                                </Tr>             
-                            )
-                    })}
-                </Tbody>
-            </Table>
+            <Box height="310px" overflowY="auto">
+                <Table tableLayout="fixed" variant="striped" colorScheme="teal" marginBottom="50px">
+                    <Thead>
+                        <Tr>
+                        <Th>Script ID</Th>
+                        <Th>Prescriber</Th>
+                        <Th>Medication</Th>
+                        <Th>Time purchased</Th>
+                        </Tr>
+                    </Thead>
+                    
+                    <Tbody>
+                        {claimedScripts.length != 0 && claimedScripts.map(element => {
+                                return( 
+                                    <Tr key={element.id}>
+                                        <Td>{element.id}</Td>
+                                        <Td>{element.prescriber}</Td>
+                                        <Td>{element.medication}</Td>
+                                        <Td>{element.time_dispensed}</Td>
+                                    </Tr>             
+                                )
+                        })}
+                    </Tbody>
+                </Table>
+            </Box>
             }
             <br/>
             {children}

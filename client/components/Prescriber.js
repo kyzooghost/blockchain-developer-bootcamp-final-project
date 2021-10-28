@@ -18,6 +18,9 @@ export default function Prescriber({ children } ) {
     const [isPantoprazolePrescribing, setIsPantoprazolePrescribing] = useState(false)
     const [isCephalexinPrescribing, setIsCephalexinPrescribing] = useState(false)
     const [scripts, setScripts] = useState([])
+    const [patientScripts, setPatientScripts] = useState([])
+    const [patientScriptsButtonLoading, setPatientScriptsButtonLoading] = useState(false)
+    const [patientScriptsRequested, setPatientScriptsRequested] = useState(false)
 
     const { accounts, provider, shortenAddress } = useMetamask();
     const { pharmacyConnected } = usePharmacy();
@@ -51,6 +54,41 @@ export default function Prescriber({ children } ) {
             })();
         }
     })
+
+    async function handleSeePrescriptions() {
+        try {
+            setPatientScriptsRequested(false)
+            setPatientScriptsButtonLoading(true)
+            let script_ids = await pharmacyConnected.get_patientPrescriptions(patientAddress);
+            script_ids = script_ids.map(x => Number(ethers.utils.formatUnits(x, 0)));
+            let scripts = await Promise.all(script_ids.map(async (x) => {return await pharmacyConnected.getScriptInformation(x)}))
+            let placeholder_scripts = []
+    
+            for (let element of scripts) {
+                placeholder_scripts.push({
+                    id: Number(ethers.utils.formatUnits(element[0], 0)),
+                    prescriber: shortenAddress(element[1]),
+                    medication: element[3],
+                    time_prescribed: new Date(element[4]*1000).toLocaleString('en-AU'),
+                    time_dispensed: new Date(element[5]*1000).toLocaleString('en-AU'),
+                    claimed: (element[7] ? 'yes' : 'no'),
+                    valid: element[6].toString(),
+                    price: `${ethers.utils.formatEther(element[9].toString())} ETH`
+                })
+            }
+
+            placeholder_scripts = placeholder_scripts.reverse()
+    
+            setPatientScripts(placeholder_scripts)
+            setPatientScriptsButtonLoading(false)
+            setPatientScriptsRequested(true)
+        } catch(err) {
+            alert(err.message)
+        }
+    }
+
+    // 0xd9A8DEF63006499689E6CCC1114A8E6151CeD64D
+    // 0xd9362eFdB46551eD707c5Bed8AA4d3410aEfd3Cc
 
     async function handleAspirinClick() {
         if(ethers.utils.isAddress(patientAddress)) {
@@ -149,6 +187,59 @@ export default function Prescriber({ children } ) {
             <WelcomeText textAlign="center">{" Enter your patient's Ethereum address: "}</WelcomeText> 
             <br/>
             <PatientInput placeholder= "0x..." value={patientAddress} onChange={handleAddressInputChange}/>
+            <br/>
+            <br/>
+            <Flex justifyContent = "center">
+                <Button 
+                    isDisabled={!(ethers.utils.isAddress(patientAddress) && accounts[0] != patientAddress)} 
+                    isLoading={patientScriptsButtonLoading}
+                    onClick={handleSeePrescriptions}
+                    colorScheme="gray" 
+                    border="1px" 
+                    borderColor="gray.300"
+                    >
+                    See patient's existing prescriptions
+                </Button>
+            </Flex>
+            {patientScriptsRequested ? 
+                
+                patientScripts.length == 0 ? 
+                    <Flex justifyContent = "center" mt={6} mb={-2}>
+                        <Text>Your patient has no prescriptions</Text> 
+                    </Flex>
+                    :
+                    <Box mt={8}>
+                        <WelcomeText textAlign="center" mb={5}>{patientAddress}'s prescriptions</WelcomeText>
+                        <Box mt={5} mb={-2} height="310px" overflowY="auto">
+                            <Table tableLayout="fixed" variant="striped" colorScheme="cyan" marginBottom="50px">
+                                <Thead>
+                                    <Tr>
+                                        <Th>Script ID</Th>
+                                        <Th>Prescriber</Th>
+                                        <Th>Medication</Th>
+                                        <Th>Time prescribed</Th>
+                                        <Th isBool>Claimed?</Th>
+                                    </Tr>
+                                </Thead>
+
+                                <Tbody>
+                                    {patientScripts.map(element => {
+                                        return( 
+                                            <Tr key={element.id}>
+                                                <Td>{element.id}</Td>
+                                                <Td>{element.prescriber}</Td>
+                                                <Td>{element.medication}</Td>
+                                                <Td>{element.time_prescribed}</Td>
+                                                <Td isBool>{element.claimed}</Td>
+                                            </Tr>             
+                                        )
+                                    })}
+                                </Tbody>
+                            </Table>
+                        </Box>
+                    </Box>
+                : 
+                null}
             <br/>
             <br/>
             <WelcomeText textAlign="center">What would you like to prescribe?</WelcomeText>
