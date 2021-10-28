@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/kyzooghost/blockchain-developer-bootcamp-final-project/main/.github/images/homepage.png)
+![](https://raw.githubusercontent.com/kyzooghost/blockchain-developer-bootcamp-final-project/main/images/homepage.png)
 
 # BLOCKCHAIN PHARMACY 💊
 
