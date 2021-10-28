@@ -1,5 +1,7 @@
 Ran a MythX Quick Analysis with promotion code supplied by Consensys Academy 🍻
 
+As promoted at https://mythx.io/detectors/ - this detects most SWCs found in the [SWC Registry](https://swcregistry.io/)
+
 ### SWC-100 Function Default Visibility
 
 Explicitly specified function visibilities
