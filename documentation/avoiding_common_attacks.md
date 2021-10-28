@@ -1,3 +1,5 @@
+Ran a MythX Quick Analysis with promotion code supplied by Consensys Academy 🍻
+
 ### SWC-100 Function Default Visibility
 
 Explicitly specified function visibilities
@@ -9,6 +11,10 @@ Implemented the OpenZeppelin SafeMath library
 ### SWC-102 Outdated Compiler Version
 
 Used Solidity ^0.8.0
+
+### SWC-103 Floating Pragma
+
+Set `pragma solidity 0.8.9;`
 
 ### SWC-106 Unprotected SELFDESTRUCT Instruction
 
