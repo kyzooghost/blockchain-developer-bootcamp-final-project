@@ -2,7 +2,8 @@
 
 A pharmacy existing as a smart contract on the blockchain
 
-Frontend deployed on https://blockchaindeveloperbootcampfin.herokuapp.com/
+App available on https://blockchaindeveloperbootcampfin.herokuapp.com/
+Public Ethereum address: 0x1D3BaEDd71E597982D686379F90d91ab23181956
 
 ## ROLES
 - **Patients** can see pending prescriptions and pay for them
@@ -42,9 +43,9 @@ Then to install the required dependencies, run
 
     npm install
 
-## DEPLOYING ON GANACHE
+## DEPLOYING ON GANACHE TESTNET
 
-To deploy your own instance of the Pharmacy smart contract on a Ganache test blockchain, you will first need to install Ganache - https://www.trufflesuite.com/ganache
+To deploy your own instance of the Pharmacy smart contract on a Ganache testnet blockchain, you will first need to install Ganache - https://www.trufflesuite.com/ganache
 
 You will then need to link this project to Ganache by using Ganache's 'ADD PROJECT' feature and selecting this project's truffle-config.js file.
 

@@ -11,11 +11,11 @@ Start the frontend
 
 Hosting
 - How to set up a React environment? How to then host that environment on React? ✔️
-- Host on Heroku or Netlify ✔️
+- Host on Heroku, Netlify or some other free frontend service ✔️
 
 Truffle scripts
 - Test compilation of Pharmacy.sol ✔️
-- Write unit tests script/s - at least 4 unit tests✔️, Test that should work, that should fail, and complete mess // Write more test code than Solidity code lol ✔️
+- Write unit tests script/s - at least 5 unit tests✔️, Test that should work, that should fail, and complete mess // Write more test code than Solidity code lol ✔️
 - https://github.com/ConsenSys-Academy-Github-Classroom/supply-chain-exercise-RasenGUY/tree/master/test ✔️
 - Write migration scripts ✔️
 
@@ -40,6 +40,7 @@ In README.md
 - Clear instructions on running contract unit tests, and which port a local testnet should be running on ✔️
 - Directory structure explanation ✔️
 - Heroku link ✔️
+- Include your public Ethereum account if you would like to receive your certification as an NFT
 
 ## ADDITIONAL FEATURES TO CONSIDER IF TIME ALLOWING OR IF CRITICAL
 
