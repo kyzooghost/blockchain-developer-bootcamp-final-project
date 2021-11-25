@@ -48,6 +48,9 @@ Modifier functions - onlyPrescriber(), onlyAdmin(), isPrescriptionValid() - only
 
 The createPrescription(), editPrescription(), cancelPrescription() and purchase() functions emit corresponding events
 
+## SMART CONTRACT CONSIDERATIONS
+- We can avoid storing prescription data in structs in on-chain storage, and instead store them in event logs or even calldata to save the user gas
+
 ## FRONTEND DESIGN DECISIONS
 
 React framework and deployment

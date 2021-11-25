@@ -68,7 +68,9 @@ Then type
 
     npm run test-ganache
 
-This will deploy the Pharmacy smart contract onto your Ganache instance, and then serve a frontend connected to the smart contract at http://localhost:3000/
+This will deploy the Pharmacy smart contract onto your Ganache instance, and then serve a frontend connected to the smart contract at http://localhost:3000/.
+
+Note that you do need to add Ganache as a custom network to Metamask to interact with this frontend. See https://www.trufflesuite.com/docs/truffle/getting-started/truffle-with-metamask - The custom network needs a "New RPC URL" value of `http://127.0.0.1:8545`
 
 ## DEPLOYING ON RINKEBY
 
