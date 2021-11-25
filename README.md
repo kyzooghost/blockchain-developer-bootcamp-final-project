@@ -11,8 +11,8 @@ App available on https://blockchaindeveloperbootcampfin.herokuapp.com/
 Deployed on Rinkeby at 0x4a0C38Fe6Ec84EE72Fa4f4cE67bA6Ac356d13fD7
 
 ## ROLES
-- **Patients** can see pending prescriptions and pay for them
-- **Prescribers** can check the existing scripts for a patient, create new prescriptions, and see their most recent prescriptions
+- **Patients** can see pending prescriptions and pay for them, and also see previously purchased prescriptions
+- **Prescribers** can check the prescription history for a patient, create new prescriptions for a specified patient, and see their own most recent prescriptions
 
 
 ## DIRECTORY STRUCTURE
@@ -36,6 +36,11 @@ The root folder has been initialised as both a Next.js app and a Truffle app (th
 ```
 
 ## INSTALLATION
+
+**Prerequisites**
+- Node.js >= v14
+- Truffle
+- Ganache
 
 To install the project, first go to your directory of choice and clone the repo
 
