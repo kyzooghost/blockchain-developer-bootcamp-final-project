@@ -16,7 +16,7 @@ Used Solidity ^0.8.0
 
 ### SWC-103 Floating Pragma
 
-Set `pragma solidity 0.8.9;`
+Set `pragma solidity 0.8.10;`
 
 ### SWC-106 Unprotected SELFDESTRUCT Instruction
 
