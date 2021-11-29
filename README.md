@@ -38,10 +38,12 @@ The root folder has been initialised as both a Next.js app and a Truffle app (th
 ## INSTALLATION
 
 **Prerequisites**
-- Node.js >= v14
-- Truffle
-- Ganache
+- Node.js >= v14 (https://nodejs.org/en/)
+- Truffle `npm install -g truffle`
+- Ganache `npm install -g ganache-cli`
 
+
+**Instructions**
 To install the project, first go to your directory of choice and clone the repo
 
     git clone https://github.com/kyzooghost/blockchain-developer-bootcamp-final-project.git
@@ -88,13 +90,7 @@ This will deploy a new instance of the Pharmacy smart contract to Rinkeby, and t
 
 ## TESTING
 
-To run the test suite, you can use either
-
-    truffle test
-
-or
-
-    npm test
+To run the test suite `npx truffle test`
 
 ## .env FILE
 
