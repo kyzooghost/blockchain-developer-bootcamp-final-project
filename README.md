@@ -38,9 +38,9 @@ The root folder has been initialised as both a Next.js app and a Truffle app (th
 ## INSTALLATION
 
 **Prerequisites**
-- Node.js >= v14 (https://nodejs.org/en/)
-- Truffle `npm install -g truffle`
-- Ganache `npm install -g ganache-cli`
+- Node.js >= v14: https://nodejs.org/en/
+- Truffle: `npm install -g truffle`
+- Ganache: `npm install -g ganache-cli`
 
 
 **Instructions**
