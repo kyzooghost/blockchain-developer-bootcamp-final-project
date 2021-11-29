@@ -44,6 +44,7 @@ The root folder has been initialised as both a Next.js app and a Truffle app (th
 
 
 **Instructions**
+
 To install the project, first go to your directory of choice and clone the repo
 
     git clone https://github.com/kyzooghost/blockchain-developer-bootcamp-final-project.git
@@ -90,7 +91,9 @@ This will deploy a new instance of the Pharmacy smart contract to Rinkeby, and t
 
 ## TESTING
 
-To run the test suite `npx truffle test`
+To run the test suite 
+
+`npx truffle test`
 
 ## .env FILE
 
