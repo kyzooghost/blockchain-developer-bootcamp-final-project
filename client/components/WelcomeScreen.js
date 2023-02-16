@@ -158,12 +158,12 @@ const WelcomeButton = chakra(Button, {
 
 const HomeButton = chakra(Button, {
     baseStyle: {
-        bgColor: "gray.200",
+        bgColor: "gray.500",
         fontSize: "1.1rem",
         height: "45px",
         marginBottom: "35px",
         _hover:{
-            background: "gray.300",
+            background: "gray.600",
         }
     }
 })
