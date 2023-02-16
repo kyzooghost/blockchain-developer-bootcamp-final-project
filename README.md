@@ -6,9 +6,9 @@ A pharmacy existing as a smart contract on the blockchain
 
 Screencast - https://youtu.be/F1P_L6te9iY
 
-App available on https://blockchaindeveloperbootcampfin.herokuapp.com/
+App available on https://blockchain-developer-bootcamp-final-project-ff31jg8cb.vercel.app/
 
-Deployed on Rinkeby at 0x4a0C38Fe6Ec84EE72Fa4f4cE67bA6Ac356d13fD7
+Deployed on Goerli at 0xe274AB8df1e12e7eeE03D97B1b10eA1C53Fa1bD7
 
 ## ROLES
 - **Patients** can see pending prescriptions and pay for them, and also see previously purchased prescriptions

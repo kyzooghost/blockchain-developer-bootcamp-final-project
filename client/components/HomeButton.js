@@ -12,11 +12,11 @@ export default function HomeButton() {
             <>
                 <Button 
                     onClick={handleClick}
-                    bgColor= "gray.500"
+                    bgColor= "gray.200"
                     fontSize = "1.1rem"
                     height = "45px"
                     _hover={{
-                        background: "gray.700",
+                        background: "gray.300",
                       }}
                 >
                     Return to home page
