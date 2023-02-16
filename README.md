@@ -6,7 +6,7 @@ A pharmacy existing as a smart contract on the blockchain
 
 Screencast - https://youtu.be/F1P_L6te9iY
 
-App available on https://blockchain-developer-bootcamp-final-project-ff31jg8cb.vercel.app/
+App available on https://blockchain-pharmacy.vercel.app/
 
 Deployed on Goerli at 0xe274AB8df1e12e7eeE03D97B1b10eA1C53Fa1bD7
 
